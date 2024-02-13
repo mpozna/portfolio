@@ -1,0 +1,22 @@
+#icon-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#icon {
+    width: auto;
+    height: 5%;
+    max-height: 60px;
+}
+
+@media (max-width: 600px) {
+    #icon-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px; 
+      }
+    #icon {
+        height: 50px;
+        width: auto;
+    }
+}

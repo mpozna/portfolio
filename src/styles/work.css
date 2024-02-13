@@ -1,0 +1,47 @@
+.content-container {
+    padding: 1rem;
+    background-color: #ECEBE9;
+    border-radius: 8px;
+}
+
+.content-container-left {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: #ECEBE9;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.job-title {
+    font-weight: bold;
+}
+
+.company {
+    color: darkslategray;
+    font-style: italic;
+    padding-bottom: 7px;
+}
+
+.job-description {
+    text-align: justify;
+}
+
+@media (max-width: 600px) {
+    #timeline-container {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    .company {
+        color: darkslategray;
+        font-style: italic;
+        padding-bottom: 0%;
+    }
+
+    .date {
+        color: darkslategray;
+        padding-bottom: 7px;
+    }
+}
