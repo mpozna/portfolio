@@ -9,7 +9,7 @@
     max-height: 60px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     #icon-container {
         display: grid;
         grid-template-columns: repeat(4, 1fr);

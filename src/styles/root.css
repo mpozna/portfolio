@@ -1,6 +1,6 @@
 #navcontainer {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     column-gap: 5%;
     width: 100%;
@@ -8,38 +8,25 @@
     top: 0;
     z-index: 1;
     border-bottom: 1px solid lightslategray;
-    background-color: #F5F5F5;
+    background-color: #1A1A1A;
+    opacity: 97%;
 }
 
 #nav-item-container {
     display: flex;
     width: 50%;
     justify-content: flex-end;
-    column-gap: 50px;
-}
-
-#navbar {
-    display: flex;
-    text-decoration: none;
-    line-height: 5vh;
-    column-gap: 3vw;
-    justify-content: center;
-    align-items: center;
+    column-gap: 25%;
+    line-height: 50px;
 }
 
 .nav-item {
     cursor: pointer;
+    font-size: x-large;
 }
 
 .nav-item:hover {
-    color: darkslategray;
-}
-
-#signature {
-    font-family: cursive;
-    padding: 0;
-    line-height: 0;
-    font-size: 20pt;
+    color: #a10d1e;
 }
 
 #components {
@@ -48,9 +35,16 @@
     row-gap: 20px;
 }
 
-@media (max-width: 600px) {
-    #navcontainer {
-        display: flex;
+@media (max-width: 950px) {
+    #nav-item-container {
+        width: 100%;
         justify-content: space-between;
+        column-gap: 5%;
+    }
+}
+
+@media (max-width: 600px) {
+    .nav-item {
+        font-size: large;
     }
 }

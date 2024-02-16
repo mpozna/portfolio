@@ -1,25 +1,47 @@
 import Bitmoji from '../images/bitmoji.png'
-import SocialMediaTemp from '../images/social-media-temp.png'
 import '../styles/about.css'
-import LinkedIn from '../images/linkedin.png'
-import { Button, Icon, SvgIcon, useMediaQuery } from '@mui/material'
+import { Button, useMediaQuery } from '@mui/material'
+import FileDownloadIcon from '@mui/icons-material/FileDownload';
 
 const Title = () => {
-    const media = useMediaQuery('(max-width:600px)')
+    const mobile = useMediaQuery('(max-width:800px)')
 
-    return (
-        <div id='container'>
-            <div id='header-container'>
-                <p id='header'>Hi I'm Mike!</p>
-                <p id='subheader'>Full Stack Developer</p>
-                <div id='resume-button-container'>
-                    <Button id='resume-button' variant='contained' color='primary' size={media ? 'small' : 'large'} href='src/Documents/Resume_Jan2023.pdf' download={true}>Download Resume</Button>
+    const DesktopView = () => {
+        return (
+            <div id='container'>
+                <div id='header-container'>
+                    <p id='header'>Hi, I'm Mike!</p>
+                    <p id='subheader'>Full Stack Developer</p>
+                    <Button id='resume-button' variant='contained' size='large' href='src/Documents/Mike_Pozna_Resume.pdf' download={true}>
+                        Download Resume <FileDownloadIcon id='download-icon' />
+                    </Button>
+                </div>
+                <div id='image-container'>
+                    <img id='bitmoji' src={Bitmoji} />
                 </div>
             </div>
-            <div id='image-container'>
-                <img id='bitmoji' src={Bitmoji} />
+        )
+    }
+
+    const MobileView = () => {
+        return (
+            <div id='container'>
+                <div id='header-container'>
+                    <p id='header'>Hi, I'm Mike!</p>
+                    <p id='subheader'>Full Stack Developer</p>
+                </div>
+                <div id='image-container'>
+                    <img id='bitmoji' src={Bitmoji} />
+                </div>
+                <Button id='resume-button' variant='contained' href='./Mike_Pozna_Resume.pdf' download={true}>
+                    Download Resume <FileDownloadIcon id='download-icon' />
+                </Button>
             </div>
-        </div>
+        )
+    }
+
+    return (
+        mobile ? <MobileView /> : <DesktopView />
     )
 }
 

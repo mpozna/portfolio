@@ -4,7 +4,6 @@ import PythonLogo from '../images/python.png'
 import JavaScript from '../images/javascript.svg'
 import TypeScript from '../images/typescript.png'
 import React from '../images/react.png'
-import Vue from '../images/vue.png'
 import SQL from '../images/sql.png'
 import CSS from '../images/css.png'
 import HTML from '../images/html.svg'
@@ -15,7 +14,6 @@ const skills = [
   JavaScript,
   TypeScript,
   React,
-  // Vue,
   CSharpLogo,
   PythonLogo,
   SQL,

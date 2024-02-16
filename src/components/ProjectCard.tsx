@@ -1,6 +1,6 @@
-import React from 'react'
 import { TProject } from '../types'
 import GitHubIcon from '@mui/icons-material/GitHub';
+import '../styles/project.css'
 
 interface IProject {
     data: TProject

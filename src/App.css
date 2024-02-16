@@ -6,10 +6,11 @@
 
 #title {
   font-size: 30pt;
+  font-weight: 300;
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   #root {
     padding: 0 10px 10px 10px;
   }

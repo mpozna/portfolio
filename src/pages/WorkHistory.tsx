@@ -1,4 +1,4 @@
-import { TimelineConnector, TimelineContent, TimelineItem, TimelineOppositeContent, TimelineSeparator } from '@mui/lab'
+import { TimelineConnector, TimelineContent, TimelineItem, TimelineSeparator } from '@mui/lab'
 import Timeline from '@mui/lab/Timeline'
 import { Typography, useMediaQuery } from '@mui/material'
 import '../styles/work.css'
@@ -6,7 +6,7 @@ import TimelineDate from '../components/TimelineDate'
 
 
 const WorkHistory = () => {
-  const mobile = useMediaQuery('(max-width:600px)')
+  const mobile = useMediaQuery('(max-width:800px)')
 
   const DesktopView = () => {
     return (
@@ -19,7 +19,7 @@ const WorkHistory = () => {
             </TimelineSeparator>
             <TimelineContent style={{ paddingBottom: '60px' }}>
               <div className='content-container'>
-                <Typography className='job-title' fontSize={'larger'}>Jr Software Developer</Typography>
+                <Typography className='job-title' fontSize={'x-large'}>Jr Software Developer</Typography>
                 <Typography className='company' fontSize={'smaller'}>Eurofins TestOil - Strongsville, OH</Typography>
                 <Typography className='job-description' fontSize={'small'} style={{ lineHeight: '20px' }}>
                   Contributed to the development and maintenance of the customer portal using ReactJS with TypeScript.
@@ -39,7 +39,7 @@ const WorkHistory = () => {
             </TimelineSeparator>
             <TimelineContent style={{ paddingBottom: '60px' }}>
               <div className='content-container'>
-                <Typography className='job-title' fontSize={'larger'}>Tech Elevator</Typography>
+                <Typography className='job-title' fontSize={'x-large'}>Tech Elevator</Typography>
                 <Typography className='company' fontSize={'smaller'}>Coding Bootcamp</Typography>
                 <Typography className='job-description' fontSize={'small'} style={{ lineHeight: '20px' }}>
                   Completed a 16 week full stack coding bootcamp focusing on .Net, SQL Sever, JavaScript, and VueJS.
@@ -54,8 +54,8 @@ const WorkHistory = () => {
               <TimelineConnector />
             </TimelineSeparator>
             <TimelineContent style={{ paddingBottom: '60px' }}>
-              <div className='content-container-left'>
-                <Typography className='job-title' fontSize={'larger'}>Helpdesk Technician</Typography>
+              <div className='content-container'>
+                <Typography className='job-title' fontSize={'x-large'}>Helpdesk Technician</Typography>
                 <Typography className='company' fontSize={'smaller'}>Eurofins TestOil</Typography>
                 <Typography className='job-description' fontSize={'small'} style={{ lineHeight: '20px' }}>
                   Primary point of contact for initial IT support and technical troubleshooting across all systems and hardware.
@@ -75,7 +75,7 @@ const WorkHistory = () => {
             </TimelineSeparator>
             <TimelineContent>
               <div className='content-container'>
-                <Typography className='job-title' fontSize={'larger'}>IT Administrator</Typography>
+                <Typography className='job-title' fontSize={'x-large'}>IT Administrator</Typography>
                 <Typography className='company' fontSize={'smaller'}>Delaware North Sportservice</Typography>
                 <Typography className='job-description' fontSize={'small'} style={{ lineHeight: '20px' }}>
                   Managed a team of four college interns, overseeing IT projects and providing technical solutions.
@@ -94,7 +94,7 @@ const WorkHistory = () => {
             </TimelineSeparator>
             <TimelineContent style={{ paddingBottom: '60px' }}>
               <div className='content-container'>
-                <Typography className='job-title' fontSize={'larger'}>Cleveland State University</Typography>
+                <Typography className='job-title' fontSize={'x-large'}>Cleveland State University</Typography>
                 <Typography className='company' fontSize={'smaller'}>Bachelors Degree in Information Systems</Typography>
               </div>
             </TimelineContent>

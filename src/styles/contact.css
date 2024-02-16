@@ -14,7 +14,6 @@
 
 #submit-message-container {
     width: 100%;
-    background-color: #ECEBE9;
     padding: 20px;
     border-radius: 8px;
 }
@@ -28,12 +27,14 @@
 
 .contact-form-input {
     width: 45%;
+    background-color: #282828;
+    color: #fff;
 }
 
 #contact-info-text-container {
     display: flex;
     flex-direction: column;
-    row-gap: 10px;
+    row-gap: 30px;
 }
 
 .contact-item {
@@ -43,14 +44,19 @@
     font-size: 11pt;
 }
 
-.clickable-icon {
-    color: black;
+.link {
+    text-decoration: none;
+    color: #fff;
 }
 
-@media (max-width: 600px) {
+#submit-button {
+    background-color: #a10d1e;
+    opacity: 80%;
+}
+
+@media (max-width: 800px) {
     #submit-message-container {
         width: 90%;
-        background-color: #ECEBE9;
         border-radius: 8px;
     }
     #contact-container {

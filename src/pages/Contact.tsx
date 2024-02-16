@@ -3,7 +3,7 @@ import PhoneIcon from '@mui/icons-material/Phone';
 import EmailIcon from '@mui/icons-material/Email';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import { Alert, Button, Snackbar, SnackbarOrigin, TextField, useMediaQuery } from '@mui/material';
+import { Alert, Button, Snackbar, SnackbarOrigin, TextField, styled, useMediaQuery } from '@mui/material';
 import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser'
 
@@ -13,7 +13,7 @@ interface SnackState extends SnackbarOrigin {
 }
 
 const Contact = () => {
-  const media = useMediaQuery('(max-width:600px)')
+  const media = useMediaQuery('(max-width:800px)')
 
   const form = useRef()
 
@@ -47,6 +47,24 @@ const Contact = () => {
       );
   };
 
+  const WhiteBorderTextField = styled(TextField)`
+  & label.Mui-focused {
+    color: white;
+  }
+  & input {
+    color: white;
+  }
+  & .MuiOutlinedInput-root {
+    &.Mui-focused fieldset {
+      border-color: white;
+      border-width: thin;
+    }
+  }
+  & .css-12tl3rr-MuiInputBase-input-MuiOutlinedInput-input {
+    color: white;
+  }
+`;
+
   return (
     <div>
       <p id="title">Contact Me</p>
@@ -54,36 +72,34 @@ const Contact = () => {
         <div id='contact-info'>
           <div id='contact-info-text-container'>
             <div className='contact-item'>
-              <a href='tel:4405912083' className='clickable-icon'><PhoneIcon fontSize='medium' /></a>
-              <p>440.591.2083</p>
+              <PhoneIcon htmlColor='white' fontSize='medium' />
+              <a href='tel:4405912083' className='link'>440.591.2083</a>
             </div>
             <div className='contact-item'>
-              <a href='mailto:michael.pozna@gmail.com' className='clickable-icon'><EmailIcon fontSize='medium' /></a>
-              <p>michael.pozna@gmail.com</p>
+              <EmailIcon htmlColor='white' fontSize='medium' />
+              <a href='mailto:michael.pozna@gmail.com' className='link'>michael.pozna@gmail.com</a>
             </div>
             <div className='contact-item'>
-              <a href='https://www.linkedin.com/in/michaelpozna' target='_blank' className='clickable-icon'><LinkedInIcon fontSize='medium' /></a>
-              <p>linkedin.com/in/michaelpozna</p>
+              <LinkedInIcon htmlColor='white' fontSize='medium' />
+              <a href='https://www.linkedin.com/in/michaelpozna' target='_blank' className='link'>linkedin.com/in/michaelpozna</a>
             </div>
             <div className='contact-item'>
-              <a href='https://www.github.com/mpozna' target='_blank' className='clickable-icon'><GitHubIcon fontSize='medium' /></a>
-              <p>github.com/mpozna</p>
+              <GitHubIcon htmlColor='white' fontSize='medium' />
+              <a href='https://www.github.com/mpozna' target='_blank' className='link'>github.com/mpozna</a>
             </div>
           </div>
         </div>
 
-        <div id='submit-message-container'>
-          <form ref={form} onSubmit={sendEmail}>
-            <div id='inputs-container'>
-              <TextField className='contact-form-input' name='firstName' id='first-name' label='First Name' variant='outlined' size='small' fullWidth={media ? true : false} />
-              <TextField className='contact-form-input' name='lastName' id='last-name' label='Last Name' variant='outlined' size='small' fullWidth={media ? true : false} />
-              <TextField className='contact-form-input' name='phone' id='phone' label='Phone' variant='outlined' size='small' fullWidth={media ? true : false} />
-              <TextField className='contact-form-input' name='email' id='email' label='Email' variant='outlined' size='small' fullWidth={media ? true : false} />
-              <TextField className='contact-form-input' name='message' id='message' label='Message' variant='outlined' multiline rows={4} size='small' fullWidth />
-              <Button onClick={e => sendEmail(e)} className='button' color='primary' variant='contained' size='small' fullWidth>Submit</Button>
-            </div>
-          </form>
-        </div>
+        <form ref={form} onSubmit={sendEmail}>
+          <div id='inputs-container'>
+            <WhiteBorderTextField className='contact-form-input' name='firstName' id='first-name' label='First Name' variant='outlined' size='small' fullWidth={media ? true : false} InputLabelProps={{ style: { color: '#fff' } }} />
+            <WhiteBorderTextField className='contact-form-input' name='lastName' id='last-name' label='Last Name' variant='outlined' size='small' fullWidth={media ? true : false} InputLabelProps={{ style: { color: '#fff' } }} />
+            <WhiteBorderTextField className='contact-form-input' name='phone' id='phone' label='Phone' variant='outlined' size='small' fullWidth={media ? true : false} InputLabelProps={{ style: { color: '#fff' } }} />
+            <WhiteBorderTextField className='contact-form-input' name='email' id='email' label='Email' variant='outlined' size='small' fullWidth={media ? true : false} InputLabelProps={{ style: { color: '#fff' } }} />
+            <WhiteBorderTextField className='contact-form-input' name='message' id='message' label='Message' variant='outlined' multiline rows={4} size='small' fullWidth InputLabelProps={{ style: { color: '#fff' } }} />
+            <Button onClick={e => sendEmail(e)} id='submit-button' variant='contained' size='small' fullWidth>Submit</Button>
+          </div>
+        </form>
 
         <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
           <Alert onClose={handleClose} severity={snackState.severity}>
