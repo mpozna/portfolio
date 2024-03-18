@@ -15,7 +15,7 @@ const Root = () => {
                 <div id='nav-item-container'>
                     <div className="nav-item" onClick={() => handleLinkClick('tech-stack')}>Stack</div>
                     {/* <div className="nav-item" onClick={() => handleLinkClick('projects')}>Projects</div> */}
-                    <div className="nav-item" onClick={() => handleLinkClick('work-history')}>History</div>
+                    <div className="nav-item" onClick={() => handleLinkClick('work-history')}>Experience</div>
                     <div className="nav-item" onClick={() => handleLinkClick('contact')}>Contact</div>
                 </div>
             </>

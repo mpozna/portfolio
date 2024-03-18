@@ -26,7 +26,9 @@ const TechnicalSkills = () => {
       <div id='icon-container'>
         {skills.map(x => {
           return (
-            <img src={x} id='icon' />
+            x == 'SQL' ?
+              <img src={x} id='icon' style={{ backgroundColor: 'white', borderRadius: '10px', padding: '4px' }} /> :
+              <img src={x} id='icon' />
           )
         })}
       </div>

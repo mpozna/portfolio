@@ -14,3 +14,12 @@ export type TimeLineDate = {
     height?: string,
     fontSize?: string,
 }
+
+export type TWorkHistory = {
+    title: string,
+    company: string,
+    desktopDate: string,
+    mobileDates: string,
+    description?: string,
+    connector: boolean,
+}
